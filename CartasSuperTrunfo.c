@@ -12,13 +12,12 @@ int main() {
   int pracas1= 1;
   int hospitais1= 0;
   float pib1= 1200000000.00;
-  char cidade2[40]= "cidade2";
-  int habitantes2= 5776;
-  int pracas2= 1;
-  int hospitais2= 0;
+  char cidade2[40]= "antonio";
+  int habitantes2= 5779;
+  int pracas2= 2;
+  int hospitais2= 3;
   float pib2= 148000000.00;
 
-  //carta 2 define os atributos da carta 2 do game.
 
   // Área para entrada de dados
 
@@ -43,6 +42,33 @@ int main() {
     printf("Pracas: %d\n", pracas1);
     printf("Hospitais: %d\n", hospitais1);    
     printf("PIB: %.2f\n", pib1);
+
+    printf("Hora de cadastrar a segunda carta!\n");
+    
+    printf("Digite sua cidade: \n");
+    scanf("%s", &cidade2); 
+    
+    printf("Digite a quantidade de habitantes: \n");
+    scanf("%d", &habitantes2);
+
+    printf("Digite a quantidade de pracas:\n");
+    scanf("%d", &pracas2);
+
+    printf("Digite a quantidade de hospitais:\n");
+    scanf("%d", &hospitais2);
+
+    printf("Digite o PIB:");
+    scanf("%f", &pib2);
+
+    printf("=== CARTA 2 CADASTRADA COM SUCESSO! ===\n");
+    printf("cidade: %s\n", cidade2); 
+    printf("Habitantes: %d\n", habitantes2);
+    printf("Pracas: %d\n", pracas2);
+    printf("Hospitais: %d\n", hospitais2);  
+    printf("PIB: %.2f\n", pib2);
+
+
+  
 
 
 
