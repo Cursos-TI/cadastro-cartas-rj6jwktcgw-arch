@@ -28,6 +28,12 @@ int main() {
   float area2= 500.0;
   float pib2= 2000000000.00;  
 
+// Cálculo da densidade populacional e PIB per capita para cada cidade **VARIAVEIS** LINHA 121
+  float densidade_populacional1 = população1 / area1;
+  float densidade_populacional2 = população2 / area2;
+  float pib_per_capita1 = pib1 / população1;
+  float pib_per_capita2 = pib2 / população2;
+
 
   printf(" ===DESAFIO SUPER TRUNFO - CIDADES ===\n");
   getchar(); // Limpa o buffer do teclado
@@ -119,8 +125,10 @@ int main() {
   printf("Cidade: %s\n", cidade1);
   printf("População: %d\n", população1);
   printf("Pontos Turísticos: %d\n", numero_de_pontos_turisticos1);
+  printf("Densidade Populacional: %.2f\n", densidade_populacional1);
   printf("Área: %.2f\n", area1);
   printf("PIB: %.2f\n", pib1);
+  printf("PiB per capita: %.2f\n", pib_per_capita1);
 
   printf("Carta 2:\n");
   printf("Estado: %s\n", estado2);
@@ -128,8 +136,11 @@ int main() {
   printf("Cidade: %s\n", cidade2);
   printf("População: %d\n", população2);
   printf("Pontos Turísticos: %d\n", numero_de_pontos_turisticos2);
+  printf("Densidade Populacional: %.2f\n", densidade_populacional2);
   printf("Área: %.2f\n", area2);
   printf("PIB: %.2f\n", pib2);
+  printf("PiB per capita: %.2f\n", pib_per_capita2);
+
 
 return 0;
 } 
