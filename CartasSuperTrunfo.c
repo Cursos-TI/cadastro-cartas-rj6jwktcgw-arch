@@ -10,29 +10,26 @@ int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
 
   //variáveis para a carta 1
-  char estado1[2]= "RS";
-  char codigo1[3]= "A01";
-  char cidade1[20]= "ijui";
-  int população1= 5776; 
-  int numero_de_pontos_turisticos1= 5;
-  float area1= 783.0;
-  float pib1= 1200000000.00;
+  char estado1[2];
+  char codigo1[3];
+  char cidade1[20];
+  int população1; 
+  int numero_de_pontos_turisticos1;
+  float area1;
+  float pib1;
 
 
   //variáveis para a carta 2
-  char estado2[2]= "SC";
-  char codigo2[3]= "A02";
-  char cidade2[20]= "florianopolis";  
-  int população2= 500000; 
-  int numero_de_pontos_turisticos2= 10;
-  float area2= 500.0;
-  float pib2= 2000000000.00;  
+  char estado2[2];
+  char codigo2[3];
+  char cidade2[20];
+  int população2; 
+  int numero_de_pontos_turisticos2;
+  float area2;
+  float pib2;
 
 // Cálculo da densidade populacional e PIB per capita para cada cidade **VARIAVEIS** LINHA 121
-  float densidade_populacional1 = população1 / area1;
-  float densidade_populacional2 = população2 / area2;
-  float pib_per_capita1 = pib1 / população1;
-  float pib_per_capita2 = pib2 / população2;
+ 
 
 
   printf(" ===DESAFIO SUPER TRUNFO - CIDADES ===\n");
@@ -114,6 +111,12 @@ int main() {
     printf("area: %.2f\n", area2);
     printf("pib: %.2f\n", pib2);
 
+  
+  float densidade_populacional1 = população1 / area1;
+  float densidade_populacional2 = população2 / area2;
+  float pib_per_capita1 = pib1 / população1;
+  float pib_per_capita2 = pib2 / população2;
+
 
 
   // Área para exibição dos dados da cidade
@@ -140,6 +143,31 @@ int main() {
   printf("Área: %.2f\n", area2);
   printf("PIB: %.2f\n", pib2);
   printf("PiB per capita: %.2f\n", pib_per_capita2);
+
+  printf("=== FIM DO CADASTRO DAS CARTAS! ===\n");
+  printf("Agora que as cartas estão cadastradas, vamos comparar as propriedades das cidades para descobrir qual é a melhor carta!\n");
+
+  printf("Pressione uma tecla para comparar as cartas...\n");
+  getchar(); // Aguarda o usuário pressionar uma tecla
+
+  printf("Comparando as cartas...\n");
+
+  printf("Se o resultado for 1 significa que a carta1 é vencedora, se for 0 significa que a carta2 é vencedora.\n");
+
+  printf("A população da Carta 1 é maior que a população da carta 2? a Carta %d venceu\n", população1 > população2);
+  printf("O PIB da Carta 1 é maior que o PIB da carta 2? a Carta %d venceu\n", pib1 > pib2);
+  printf("O numero de pontos turisticos da Carta 1 é maior que o numero de pontos turisticos da Carta 2? A Carta %d Venceu\n", numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2);
+  printf("A densidade populacional da Carta 1 é maior que a densidade populacional da Carta 2? A Carta %d Venceu\n", densidade_populacional1 > densidade_populacional2);
+  printf("O PIB per capita da Carta 1 é maior que o PIB per capita da Carta 2? A Carta %d Venceu\n", pib_per_capita1 > pib_per_capita2);
+  printf("A area da Carta 1 é maior que a area da Carta 2? a Carta %d venceu\n", area1 > area2);
+
+  printf("Poder total carta 1: %.2f\n", (float)(população1 + pib1 + numero_de_pontos_turisticos1 + densidade_populacional1 + pib_per_capita1 + pib1));
+  printf("Poder total carta 2: %.2f\n", (float)(população2 + pib2 + numero_de_pontos_turisticos2 + densidade_populacional2 + pib_per_capita2 + pib2));
+  printf("A carta vencedora é: %s\n", (população1 + pib1 + numero_de_pontos_turisticos1 + densidade_populacional1 + pib_per_capita1 + pib1) > (população2 + pib2 + numero_de_pontos_turisticos2 + densidade_populacional2 + pib_per_capita2 + pib2) ? cidade1 : cidade2);
+
+  
+
+  
 
 
 return 0;
